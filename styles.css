@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+/* reset basic styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* variables */
+:root {
+    --clr-primary: hsl(193, 38%, 86%);
+    --clr-secondary: hsl(150, 100%, 66%);
+
+    --clr-gray-blue: hsl(217, 19%, 38%);
+    --clr-dark-gray-blue: hsl(217, 19%, 24%);
+    --clr-dark-blue: hsl(218, 23%, 16%);
+}
+
+/* styles */
+body {
+    font-size: 28px;
+
+    background-color: var(--clr-dark-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+blockquote {
+    font-family: "Manrope";
+    font-size: 24px;
+    font-weight: 600;
+
+    color: var(--clr-primary);
+
+    margin-block-end: 1rem;
+}
+
+button {
+    --item-width: 4rem;
+
+    display: block;
+    position: absolute;
+    bottom: -2rem;
+    left: calc(50% - var(--item-width) / 2);
+
+    width: var(--item-width);
+    aspect-ratio: 1;
+    border-radius: calc(var(--item-width) / 2);
+
+    background-image: url("./images/icon-dice.svg");
+    background-repeat: no-repeat;
+    background-color: var(--clr-secondary);
+    background-position: 50%;
+    border: none;
+
+    cursor: pointer;
+}
+
+button:hover,
+button:focus-visible,
+button:active {
+    box-shadow: 0 0 20px 5px var(--clr-secondary);
+}
+
+button:focus-visible {
+    outline: none;
+}
+
+h1 {
+    font-family: "Manrope";
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: var(--clr-secondary);
+
+    margin-block-end: 1.6rem;
+}
+
+main {
+    margin: 1.5rem;
+}
+
+picture {
+    display: block;
+
+    margin-block-end: 1.5rem;
+}
+
+.card {
+    position: relative;
+    background-color: var(--clr-dark-gray-blue);
+    border-radius: 0.5rem;
+
+    padding: 2.5rem 1.5rem;
+
+    text-align: center;
+
+    max-width: 34rem;
+}
+
+@media (min-width: 40rem) {
+    blockquote {
+        font-size: 28px;
+
+        margin-block-end: 2rem;
+    }
+
+    h1 {
+        font-size: 13px;
+    }
+}
